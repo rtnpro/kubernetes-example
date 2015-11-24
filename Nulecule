@@ -1,0 +1,15 @@
+---
+specversion: 0.0.2
+id: helloapache-app
+
+metadata:
+  name: Hello Apache App
+  appversion: 0.0.1
+  description: Atomic app for deploying a really basic Apache HTTP server
+graph:
+  - name: Sample Python webapp on Kubernetes
+    artifacts:
+      kubernetes:
+        - file://nginx-flask-pod_multicontainer.yml
+        - file://nginx-flask-replication_controller.yml
+        - file://nginx-flask-service.yml
